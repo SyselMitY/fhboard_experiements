@@ -38,7 +38,7 @@ fn main() -> ! {
     
     let mut delay = cortex_m::delay::Delay::new(core.SYST,clocks.system_clock.freq().to_Hz());
     
-    let mut led = pins.d4.into_push_pull_output_in_state(PinState::Low);
+    let mut led = pins.d3.into_push_pull_output_in_state(PinState::Low);
     loop {
         delay.delay_ms(500);
         led.set_high().unwrap();
